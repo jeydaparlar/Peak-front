@@ -1,9 +1,9 @@
 export interface Exercise {
-    exoId: string;
+    exo_id: string;
     name: string;
     description: string;
-    mainMuscle: string;
-    secondaryMuscle: string;
+    main_muscle: string;
+    secondary_muscle: string;
     equipment: string;
     category: string;
   }
