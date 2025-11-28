@@ -1,0 +1,133 @@
+:root{
+	--card-bg: #fcbde4;
+	--muted: #6b7280;
+	--accent: #fbfbfb;
+	--border: #e6e9ef;
+	--radius: 10px;
+	--shadow: 0 6px 18px rgba(31,41,55,0.06);
+}
+
+:host {
+  display: block;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+	font-size: 1.875rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	color: #1f2937;
+	border-bottom: 3px solid #fcbde4;
+	padding-bottom: 0.5rem;
+	display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.workout-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 1rem;
+	padding: 1rem 0;
+	align-items: start;
+}
+
+.workout-card {
+	background-color: #fcbde4 !important;
+	border: 1px solid #e6e9ef;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(31,41,55,0.06);
+	padding: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 80px;
+	transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.workout-card:hover,
+.workout-card:focus-within {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 32px rgba(31,41,55,0.12);
+}
+
+.workout-card .card-header {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+.workout-card .thumb {
+	width: 64px;
+	height: 64px;
+	border-radius: 8px;
+	background: linear-gradient(135deg,#f3f4f6,#eef2ff);
+	display: inline-block;
+	object-fit: cover;
+	flex: 0 0 64px;
+}
+
+.workout-card h3 {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.2;
+	color: #1f2937;
+}
+
+.workout-card .meta {
+	color: #6b7280;
+	font-size: 0.8rem;
+}
+
+.workout-card .card-body {
+	margin-top: 0.4rem;
+	color: #374151;
+	font-size: 0.85rem;
+	flex: 1 1 auto;
+}
+
+.workout-card .card-actions {
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+	justify-content: flex-end;
+}
+
+.btn {
+	background: transparent;
+	border: 1px solid #e6e9ef;
+	padding: 0.25rem 0.5rem;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background: #3b82f6;
+	color: #fff;
+	border-color: transparent;
+}
+
+.btn:focus-visible {
+	outline: 3px solid rgba(37,99,235,0.18);
+	outline-offset: 2px;
+}
+
+/* small screens tweaks */
+@media (max-width: 420px){
+	.workout-list { grid-template-columns: 1fr; }
+	.workout-card { padding: 0.75rem; }
+	.workout-card .thumb{ width: 56px; height: 56px; }
+}
+
+/* utility to show an empty state */
+.workout-empty {
+	color: var(--muted);
+	font-size: 0.98rem;
+	padding: 1.5rem 0;
+}
+

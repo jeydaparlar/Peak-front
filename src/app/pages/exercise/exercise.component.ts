@@ -6,9 +6,10 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-exercise',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './exercise.component.html',
-  styleUrl: './exercise.component.css'
+  styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
   exercises: Exercise[] = [];

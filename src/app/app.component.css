@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+/* Navigation/Header */
+nav {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  margin-right: 1.5rem;
+}
+
+nav a:hover {
+  color: #e0e7ff;
+  text-decoration: underline;
+}
+
+/* Main Content Area */
+router-outlet ~ * {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+app-exercise, app-workout {
+  animation: fadeIn 0.3s ease-in-out;
+  display: block;
+}
