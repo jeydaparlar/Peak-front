@@ -1,1 +1,9 @@
-<p>repetition works!</p>
+<div class="p-4">
+  <h2 class="text-2xl font-bold mb-4">Repetitions</h2>
+
+  @for (rep of repetitions; track rep.rep_id) {
+    <div class="p-3 border rounded mb-3">
+      <h3 class="font-semibold">{{ rep.weight }}</h3>
+    </div>
+  }
+</div>

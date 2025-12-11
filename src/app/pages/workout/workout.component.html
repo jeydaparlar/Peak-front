@@ -1,28 +1,29 @@
 <div>
   <h2>Workouts</h2>
+  @if (workouts.length) {
+    <div class="workout-list">
+      @for (wo of workouts; track wo.work_id) {
+        <article class="workout-card" tabindex="0">
+          <div class="card-header">
+            <img class="thumb" src="assets/workout/dumbell.png" alt="workout"/>
+            <div>
+              <h3>{{ wo.name }}</h3>
+              <div class="meta">{{ wo.date | date:'short'  }} • {{ wo.note || 'no notes' }}</div>
+            </div>
+          </div>
 
-  <div *ngIf="workouts.length; else empty" class="workout-list">
-    <article *ngFor="let wo of workouts" class="workout-card" tabindex="0">
-      <div class="card-header">
-        <img class="thumb" src="assets/workout/dumbell.png" alt="workout"/>
-        <div>
-          <h3>{{ wo.name }}</h3>
-          <div class="meta">{{ wo.date | date:'short'  }} • {{ wo.note || 'no notes' }}</div>
-        </div>
-      </div>
+          <div class="card-body">
+            <p>{{ wo.note }}</p>
+          </div>
 
-      <div class="card-body">
-        <p>{{ wo.note }}</p>
-      </div>
-
-      <div class="card-actions">
-        <button class="btn btn-primary"> <a href="/exercises">View</a></button>
-      </div>
-    </article>
-  </div>
-
-  <ng-template #empty>
-    <div class="workout-empty">No workouts to show.</div>
-  </ng-template>
+          <div class="card-actions">
+            <button class="btn btn-primary"> <a href="/exercises">View</a></button>
+          </div>
+        </article>
+      }
+    </div>
+  } @else {
+        <div class="workout-empty">No workouts to show.</div>
+  }
 </div>
   
