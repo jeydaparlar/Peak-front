@@ -1,4 +1,4 @@
-export interface Exercise {
+export interface ExerciseResponse {
     exo_id: string;
     name: string;
     description: string;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Workout } from '../../models/workout';
+import { WorkoutResponse } from '../../models/workout/workout-response';
 import { WorkoutService } from '../../services/workout.services';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./workout.component.css']
 })
 export class WorkoutComponent implements OnInit {
-  workouts: Workout[] = [];
+  workouts: WorkoutResponse[] = [];
 
   constructor(private workoutService: WorkoutService) {}
 

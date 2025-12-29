@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkoutExercise } from '../../models/workoutExercise';
-import { ExerciseComponent } from '../exercise/exercise.component';
+import { WorkoutExerciseResponse } from '../../models/workoutExercise/workoutExercise-response';
 import { WorkoutExerciseService } from '../../services/workoutExercise.service';
 import { CommonModule } from '@angular/common';
 
@@ -13,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './workout-exercise.component.css'
 })
 export class WorkoutExerciseComponent implements OnInit{
-  workout_exercises:WorkoutExercise[] = [];
+  workout_exercises:WorkoutExerciseResponse[] = [];
   constructor(private workoutExerciseService: WorkoutExerciseService){}
   ngOnInit(){
     this.workoutExerciseService.getAll().subscribe(

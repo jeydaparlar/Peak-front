@@ -2,7 +2,8 @@ import { Injectable} from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "../../enviroments/enviroment";
-import { WorkoutExercise } from "../models/workoutExercise";
+import { WorkoutExerciseResponse } from "../models/workoutExercise/workoutExercise-response";
+import { WorkoutExerciseForm } from "../models/workoutExercise/workoutExercise-form";
 
 @Injectable({
   providedIn: 'root'
@@ -13,15 +14,15 @@ export class WorkoutExerciseService {
 
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<WorkoutExercise[]> {
-    return this.http.get<WorkoutExercise[]>(this.apiUrl);
+  getAll(): Observable<WorkoutExerciseResponse[]> {
+    return this.http.get<WorkoutExerciseResponse[]>(this.apiUrl);
   }
 
-  getById(id: string): Observable<WorkoutExercise> {
-    return this.http.get<WorkoutExercise>(`${this.apiUrl}/${id}`);
+  getById(id: string): Observable<WorkoutExerciseResponse> {
+    return this.http.get<WorkoutExerciseResponse>(`${this.apiUrl}/${id}`);
   }
 
-  create(workoutExercise: WorkoutExercise): Observable<WorkoutExercise> {
-    return this.http.post<WorkoutExercise>(this.apiUrl, workoutExercise);
+  create(workoutExercise: WorkoutExerciseForm): Observable<WorkoutExerciseForm> {
+    return this.http.post<WorkoutExerciseForm>(this.apiUrl, workoutExercise);
   }
 }

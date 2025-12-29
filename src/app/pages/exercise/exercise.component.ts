@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Exercise } from '../../models/exercise';
+import { ExerciseResponse } from '../../models/exercise/exercise-response';
 import { ExerciseService } from '../../services/exercise.services';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./exercise.component.css']
 })
 export class ExerciseComponent implements OnInit {
-  exercises: Exercise[] = [];
+  exercises: ExerciseResponse[] = [];
 
 constructor(private exerciseService: ExerciseService) {}
 

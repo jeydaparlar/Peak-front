@@ -3,13 +3,8 @@
 
   @for (we of workout_exercises; track we.work_exo_id ) {
     <div class="p-3 border rounded mb-3"></div>
-    @for(ex of exercises; track ex.exo_id) {
-      @if(we.exo_id == ex.exo_id) {
-        <p class="font-semibold">{{ ex.name }}</p>
-      }
-    }
-    
-      <h3 class="font-semibold">{{ we.work_exo_id }}</h3>
-    </div>
+    <h3 class="font-semibold">{{ we.work_exo_id }}</h3>
+    <p>Exercise: {{ we.exercise.name }}</p>
+    <p>Workout: {{ we.workout.name }}</p>
   }
 </div>
