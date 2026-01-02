@@ -1,8 +1,8 @@
-import { WorkoutExerciseResponse } from '../workoutExercise/workoutExercise-response';
+import { ExerciseResponse } from '../exercise/exercise-response';
 export interface WorkoutResponse {
     work_id: string;
     name: string;
     date: Date;
     note: string;
-    workoutExercises: WorkoutExerciseResponse[];
+    exercises: ExerciseResponse[];
   }

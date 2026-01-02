@@ -1,0 +1,16 @@
+ <div class="workout-card" >
+    <div class="card-header">
+      <div class="header-content">
+        <div class="name-section">
+          <img src="/assets/workout/dumbell.png" alt="Dumbbell" class="dumbbell-icon"/>
+          <h2 class="workout-name">{{ workout.name }}</h2>
+        </div>
+        <span class="workout-date">{{ workout.date | date: 'short' }}</span>
+      </div>
+    </div>
+    
+    <div class="card-body">
+      <p class="workout-note" *ngIf="workout.note">{{ workout.note }}</p>
+      <button class="view-workouts-button" (click)="navigateToDetail()">Details</button>
+    </div>
+  </div>

@@ -1,0 +1,21 @@
+<aside class="sidebar">
+
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <img src="/profile.png" alt="Profile" class="profile"/>
+      <li *ngFor="let item of navItems" class="nav-item">
+        <a [routerLink]="item.route" 
+           routerLinkActive="active" 
+           [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+           class="nav-link"
+           [title]="item.label">
+          <span class="nav-icon">{{ item.icon }}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <button class="logout-button" title="Logout">🚪</button>
+  </div>
+</aside>

@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f1f1f2;
   min-height: 100vh;
   color: #1f2937;
 }
@@ -20,58 +20,23 @@ app-root {
   display: block;
 }
 
-/* Container and Layout */
-main, section, article {
+
+/* Site header + logo: large, centered at top of every page */
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+
+.logo {
+  /* Use clamp to keep the logo large on desktop but responsive on small screens */
+  width: clamp(160px, 22vw, 320px);
+  height: auto;
   display: block;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-}
-
-h1 { font-size: 2.25rem; }
-h2 { font-size: 1.875rem; }
-h3 { font-size: 1.25rem; }
-
-p {
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
-a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #2563eb;
-  text-decoration: underline;
-}
-
-/* Button Resets */
-button {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Utility Classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.text-center {
-  text-align: center;
+@media (max-width: 480px) {
+  .site-header { padding: 0.75rem 0; }
+  .logo { width: clamp(120px, 36vw, 220px); }
 }

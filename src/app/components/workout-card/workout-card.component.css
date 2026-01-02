@@ -1,0 +1,87 @@
+
+.workout-card {
+  background: #d21b45;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 493px;
+  height: 228px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-header {
+  padding: 1.5rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.name-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dumbbell-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.workout-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1E1E1E;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.workout-date {
+  color: #1E1E1E;
+  font-size: 0.75rem;
+  margin-left: calc(28px + 1rem);
+}
+
+.card-body {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-note {
+  color: #f1f1f2;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 0;
+  margin-left: calc(28px + 1rem);
+  margin-bottom: 1rem;
+}
+
+.view-workouts-button {
+  background: #F1F1F2;
+  color: #2b2d42;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-left: calc(28px + 1rem);
+}
