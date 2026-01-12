@@ -1,0 +1,47 @@
+.exercise-card {
+    position: absolute;
+    height: 126px;
+    left: 167px;
+    right: 623px;
+    top: 204px;
+    background: #2B2D42;
+    border-radius: 17px;
+    color: #F1F1F2;
+}
+
+.card-header {
+    position: absolute;
+    width: 328px;
+    height: 32px;
+    left: 16px;
+    top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #F1F1F2;
+}
+
+.card-body {
+    position: absolute;
+    width: 328px;
+    height: 64px;
+    left: 16px;
+    top: 56px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #F1F1F2;
+}
+.exercise-details {
+    margin: 0;
+}
+

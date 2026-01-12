@@ -10,7 +10,9 @@
     </div>
     
     <div class="card-body">
-      <p class="workout-note" *ngIf="workout.note">{{ workout.note }}</p>
+      @if(workout.note) {
+        <p class="workout-note">{{ workout.note }}</p>
+      }
       <button class="view-workouts-button" (click)="navigateToDetail()">Details</button>
     </div>
   </div>
