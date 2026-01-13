@@ -1,1 +1,16 @@
-<p>set works!</p>
+<div class="set-details-container">
+  <h2 class="Set">Sets</h2>
+  <div class="app-set-card-container">
+    @if (sets.length > 0) {
+     @for (set of sets; track set.set_id) {
+        <app-set-card
+        [set]="set">
+        </app-set-card>
+    }
+    } @else {
+        <p class="empty-state">
+            No sets found. Start by creating your first set!
+        </p>
+}
+    </div>
+</div>

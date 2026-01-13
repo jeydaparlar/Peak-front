@@ -3,11 +3,12 @@ import { WorkoutResponse } from '../../models/workout/workout-response';
 import { WorkoutService } from '../../services/workout.services';
 import { CommonModule } from '@angular/common';
 import { WorkoutCardComponent } from '../../components/workout-card/workout-card.component';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-workout',
   standalone: true,
-  imports: [CommonModule, WorkoutCardComponent],
+  imports: [CommonModule, WorkoutCardComponent, RouterLink],
   templateUrl: './workout.component.html',
   styleUrls: ['./workout.component.css']
 })

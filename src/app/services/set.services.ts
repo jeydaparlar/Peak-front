@@ -19,6 +19,9 @@ export class SetService {
     getById(id: string): Observable<SetResponse> {
         return this.http.get<SetResponse>(`${this.apiUrl}/${id}`);
     }
+    getSetsByExerciseId(workoutId: string, exerciseId: string): Observable<SetResponse[]> {
+        return this.http.get<SetResponse[]>(`${environment.apiUrl}/workouts/${workoutId}/exercises/${exerciseId}/set`);
+    }
     create(set: SetForm): Observable<SetForm> {
         return this.http.post<SetForm>(this.apiUrl, set);
     }  

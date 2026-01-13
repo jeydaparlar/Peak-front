@@ -1,0 +1,12 @@
+<div class="add-workout-page">
+  <h1 class="page-title">Add New Workout</h1>
+  <form [formGroup]="workoutForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+
+      <label for="note">Notes:</label>
+      <input type="text" id="note" formControlName="note">
+
+      <button type="submit" [disabled]="workoutForm.invalid">Submit</button>
+  </form>
+</div>

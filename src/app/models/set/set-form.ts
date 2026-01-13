@@ -1,6 +1,5 @@
-import { WorkoutExerciseForm } from "../workoutExercise/workoutExercise-form";
 export interface SetForm {
-  workoutExercise: WorkoutExerciseForm;
+  work_exo_id: string;
  repetitions: number;
   weight: number;
   rpe: number;

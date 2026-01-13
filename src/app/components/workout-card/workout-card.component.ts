@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { WorkoutResponse } from '../../models/workout/workout-response';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-workout-card',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './workout-card.component.html',
   styleUrls: ['./workout-card.component.css']
 })

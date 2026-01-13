@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { WorkoutResponse } from '../../models/workout/workout-response';
 import { WorkoutService } from '../../services/workout.services';
 import { WorkoutCardComponent } from '../../components/workout-card/workout-card.component';
@@ -7,7 +8,7 @@ import { WorkoutCardComponent } from '../../components/workout-card/workout-card
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, WorkoutCardComponent],
+  imports: [CommonModule, WorkoutCardComponent, RouterLink],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

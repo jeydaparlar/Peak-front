@@ -1,15 +1,19 @@
 <div class="workouts-page">
   <div class="page-header">
     <h1 class="page-title">Your workouts</h1>
-    <button class="add-workout-button">+ Add Workout</button>
+    <button class="add-workout-button" [routerLink]="['/addworkout']">+ Add Workout</button>
   </div>
 <div class="app-workout-card-container">
-  <app-workout-card
-  *ngFor="let workout of workouts"
-  [workout]="workout"
-></app-workout-card>
-</div>
-  <ng-template #noWorkouts>
-    <p class="empty-state">No workouts found. Start by creating your first workout!</p>
-  </ng-template>
+   
+ @if (workouts.length > 0) {
+  @for (workout of workouts; track workout.work_id) {
+    <app-workout-card
+      [workout]="workout">
+    </app-workout-card>
+  }
+} @else {
+  <p class="empty-state">
+    No workouts found. Start by creating your first workout!
+  </p>
+}
 </div>

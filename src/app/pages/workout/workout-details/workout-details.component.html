@@ -1,0 +1,17 @@
+<div class="workout-details-container">
+  <h2 class="workout-title">{{ workout.name }} - {{ workout.date | date: 'shortDate' }}</h2>
+  <div class="app-exercise-card-container">
+    @if (exercises.length > 0) {
+     @for (exercise of exercises; track exercise.exo_id) {
+        <app-exercise-card
+        [exercise]="exercise"
+        [workout]="workout">
+        </app-exercise-card>
+    }
+    } @else {
+        <p class="empty-state">
+            No exercises found. Start by creating your first exercise!
+        </p>
+}
+    </div>
+</div>

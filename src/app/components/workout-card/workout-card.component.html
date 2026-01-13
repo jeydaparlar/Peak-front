@@ -13,6 +13,6 @@
       @if(workout.note) {
         <p class="workout-note">{{ workout.note }}</p>
       }
-      <button class="view-workouts-button" (click)="navigateToDetail()">Details</button>
+      <button class="view-workouts-button" [routerLink]="['/workouts', workout.work_id]">Details</button>
     </div>
   </div>
